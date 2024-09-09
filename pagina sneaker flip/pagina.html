@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Flip - Tu Tienda de Sneakers</title>
+    <!-- CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sneaker Flip</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Sección de inicio con carrusel -->
+<section id="inicio" class="hero d-flex align-items-center justify-content-center">
+    <div id="sneakerCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#sneakerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#sneakerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#sneakerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="https://www.modaes.com/files/2020/20_recursos/producto/sneakers-circulo-728.jpg" class="d-block w-100" alt="Sneaker 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Mejores sneakers 2024</h5>
+                    <p>Modelos exclusivos en Sneaker Flip</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="https://preview.redd.it/mlhv9oum42p41.jpg?width=640&crop=smart&auto=webp&s=559bd12c11c20b30703beac68d13c96585fa4fa8" class="d-block w-100" alt="Sneaker 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Ofertas únicas</h5>
+                    <p>Compra los sneakers más buscados a los mejores precios.</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/bf/9e/d0/bf9ed0fd15a2688b19a9fa21f6ed6e11.jpg" class="d-block w-100" alt="Sneaker 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Nuevas colecciones</h5>
+                    <p>Descubre las últimas tendencias en sneakers.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#sneakerCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#sneakerCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+</section>
+
+    <!-- Sección de productos -->
+    <section id="productos" class="container my-5">
+        <h2 class="text-center mb-4">Nuestros Productos</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://dpjye2wk9gi5z.cloudfront.net/wcsstore/ExtendedSitesCatalogAssetStore/images/catalog/zoom/1027630-0501V1.jpg"class="card-img-top" alt="Sneaker 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker Modelo 1</h5>
+                        <p class="card-text">$80.00</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarrito('Sneaker Modelo 1')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://media.gq.com.mx/photos/64f0cb1cd69950fdeeb9bb7b/1:1/w_2000,h_2000,c_limit/mejores-tenis-nike-de-los-anos-90.jpg" class="card-img-top" alt="Sneaker 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker Modelo 2</h5>
+                        <p class="card-text">$90.00</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarrito('Sneaker Modelo 2')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://media.gq.com.mx/photos/62fe9743b4d523fe0069d6a0/16:9/w_1280,c_limit/tenis-nike-dunk-low-grises-blancos-para-hombre-joven.png class="card-img-top" alt="Sneaker 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker Modelo 3</h5>
+                        <p class="card-text">$85.00</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarrito('Sneaker Modelo 3')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección sobre nosotros -->
+    <section id="about" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Sobre Nosotros</h2>
+            <p class="lead text-center">En Sneaker Flip somos apasionados por el calzado de calidad. Nuestro objetivo es brindarte los mejores modelos de sneakers de marcas exclusivas.</p>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto" class="container my-5">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        <form id="contact-form">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Sneaker Flip. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts de Bootstrap y SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

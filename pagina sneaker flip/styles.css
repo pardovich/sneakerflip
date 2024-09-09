@@ -1,0 +1,35 @@
+/* styles.css */
+
+/* Asegura que el contenedor del carrusel ocupe todo el ancho disponible */
+.carousel, .carousel-inner, .carousel-item {
+    width: 100%;
+    height: auto;
+}
+
+/* Asegura que las imágenes del carrusel se ajusten al contenedor */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Mantiene las proporciones de la imagen y cubre el área del contenedor */
+}
+
+/* Opcional: estiliza las leyendas del carrusel */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Opcional: estiliza el botón de navegación del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para los controles */
+    border-radius: 50%;
+}
+
+/* Asegura que el contenido de los productos se vea bien */
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
